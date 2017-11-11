@@ -7,8 +7,9 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --bracket-spacing=false --no-semi --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --single-quote --bracket-spacing=false --no-semi --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "gatsby": "^1.9.108",
@@ -16,6 +17,14 @@
     "gatsby-plugin-react-helmet": "^1.0.8"
   },
   "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
     "prettier": "^1.8.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --bracket-spacing=false --no-semi",
+      "git add"
+    ]
   }
 }
