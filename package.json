@@ -12,9 +12,11 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "bulma": "^0.6.1",
     "gatsby": "^1.9.108",
     "gatsby-link": "^1.6.26",
-    "gatsby-plugin-react-helmet": "^1.0.8"
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sass": "^1.0.13"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
