@@ -7,8 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --single-quote --bracket-spacing=false --no-semi --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write 'src/**/*.js'",
     "precommit": "lint-staged"
   },
   "dependencies": {
@@ -29,14 +28,15 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.4.0",
     "husky": "^0.14.3",
-    "lint-staged": "^5.0.0",
-    "prettier": "^1.8.2"
+    "lint-staged": "^6.1.1",
+    "prettier": "^1.10.2"
   },
   "lint-staged": {
     "*.js": [
       "prettier --write --single-quote --bracket-spacing=false --no-semi",
-      "eslint --max-warnings 1",
+      "eslint --max-warnings 0",
       "git add"
-    ]
+    ],
+    "*.{css,scss,json,md}": ["prettier --write", "git add"]
   }
 }
