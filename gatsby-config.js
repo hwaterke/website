@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Harold Waterkeyn`
+    title: 'Harold Waterkeyn',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-styled-components`
-  ]
+    'gatsby-plugin-react-next',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    'gatsby-plugin-styled-components',
+  ],
 }
